@@ -32,6 +32,26 @@
 </div>
 
 <script src="script.js"></script>
+<div id="finalMessage" style="display:none;">
+  <h2>🎉 Happy Birthday, Keeri! 🎉</h2>
 
+  <p>
+    Questions over... ❤️<br><br>
+
+    Happy birthday to my one and only homeboy.<br><br>
+
+    Just wanted to let you know that you were my first ever male friend,
+    more like my best friend. Thank you for everything.
+    I still remember how we first met.
+    It's been one and a half years since we've known each other.
+    Thank you for all the memories, the laughs, and for always being there.
+    I hope this year brings you lots of happiness, success, good health,
+    and everything you've been wishing for.<br><br>
+
+    Stay the amazing person you are! 😁🎂❤️
+  </p>
+
+  <h1>❤️ Happy Birthday, my homeboy! ❤️</h1>
+</div>
 </body>
 </html>
