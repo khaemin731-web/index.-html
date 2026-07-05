@@ -1,33 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Keeri 🎉</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Project Keeri.exe</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: black;
+      color: #00aaff;;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #yesBtn { background: #4CAF50; color: white; }
+    #noBtn { background: #f44336; color: white; position: relative; }
+
+    #box {
+      margin-top: 30px;
+      font-size: 20px;
+      min-height: 60px;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container">
+<h2 id="question">How you doin huhh 😌</h2>
 
-  <h1>🎂 Happy Birthday Keeri! 🎂</h1>
+<div>
+  <button id="next" onclick="yes()">Yes</button >
+</div>
 
-  <p id="message">
-    Welcome to your special surprise! 💙
-  </p>
+<div id="box"></div>
 
-  <button id="startBtn">Open Surprise 🎁</button>
+<script>
+let step = 0;
 
-  <div id="content" style="display:none;">
+function setText(text){
+  document.getElementById("question").innerText = text;
+}
 
-    <h2 id="question">
-      Are you ready? 😁
-    </h2>
+function say(text){
+  document.getElementById("box").innerText = text;
+}
 
-    <button id="yesBtn">Yes 😎</button>
-    <button id="noBtn">No 🙈</button>
+// NO button RUN effect
+function moveNo(){
+  const btn = document.getElementById("noBtn");
+  btn.style.position = "absolute";
+  btn.style.left = Math.random()*80 + "vw";
+  btn.style.top = Math.random()*70 + "vh";
+}
 
-  </div>
+// YES logic
+function yes(){
+  if(step === 0){
+    setText("Ready for the surprise?😌");
+    say("");
+    step = 1;
+  }
+
+  else if(step === 1){
+    setText("You don't know what's comin next right?🙂‍↔️");
+    step = 2;
+  }
+
+  else if(step === 2){
+    setText("Okeyy let me ask you some questions 😌");
+    say("");
+    step = 3;
+  }
+
+  else if(step === 3){
+    setText("Now are u a boy?👀");
+    step = 4;
+  }
+
+  else if(step === 4){
+    say("Are you sure?");
+    step = 5;
+  }
+
+  else if(step === 5){
+    setText("Do you believe your life became peaceful after meeting me? 😌");
+    step = 6;
+  }
+
+  else if(step === 6){
+    setText("Am I your bestest female friend?");
+    step = 7;
+  }
+
+  else if(step === 7){
+    say("I know right 😌");
+    setText("Now a serious question... are you really straight?");
+    step = 8;
+  }
+
+  else if(step === 8){
+    say("It's alright I'll support you forever 😂🙌🏻");
+    setText("Do you think you've become a better person after 18 years?");
+    step = 9;
+  }
+
+  else if(step === 9){
+    setText("Now that you've become 20, you still straight?");
+    step = 10;
+  }
+
+  else if(step === 10){
+    setText("Okeyy last question... Are you grateful for having me?");
+    step = 11;
+  }
+
+  else if(step === 11){
+    say("Awww Thankyou I knew it 🥹");
+    setText("THE END 💫");
+  }
+}
+
+// NO logic (branch reactions)
+function no(){
+
+  if(step === 3){
+    say("How?? 😌");
+  }
+
+  else if(step === 4){
+    say("Wrong answer 😌 I know you missed me before too");
+  }
+
+  else if(step === 6){
+    moveNo();
+  }
+
+  else if(step === 8){
+    setText("What 🤨");
+    step = 8.1;
+  }
+
+  else if(step === 8.1){
+    say("Jst admit already 😌");
+  }
+
+  else if(step === 11){
+    moveNo();
+  }
+
+  else {
+    mo
+
+
+ 
 
 </div>
 
